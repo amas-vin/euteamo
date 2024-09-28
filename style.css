@@ -132,29 +132,35 @@ h6 {
 .carousel {
   pointer-events: none;
   position: absolute;
+   padding-top: 10%; /* Ajuste este valor conforme necessário */
+  padding-bottom: 10%; /* Ajuste este valor conforme necessário */
   -webkit-padding-before: 67px;
           padding-block-start: 67px;
   -webkit-padding-after: max(24px, calc(29px + var(--font-size-md)));
           padding-block-end: max(24px, calc(29px + var(--font-size-md)));
   perspective: 100px;
   width: 100%;
+  height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+
 }
 @media (max-width: 568px) {
   .carousel {
+     padding-bottom: 20px; /* Ajuste conforme necessário */
     -webkit-padding-after: 52px;
             padding-block-end: 52px;
   }
 }
+
 .carousel__wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
-  height: 61.2vh;
+  height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
 }
 .carousel .item {
   position: absolute;
-  max-width: 418px;
-  height: 100%;
+  max-width: 90%; /* Limita a largura máxima a 90% */
+  height: auto; /* Ajusta a altura automaticamente */
+  margin: 0 auto; /* Centraliza os itens */
   margin-inline: var(--container-padding-horizontal);
   opacity: 0;
   will-change: transform, opacity;
@@ -195,10 +201,11 @@ h6 {
           animation-delay: calc(-3.8571428571s * 2);
 }
 .carousel img {
+  width: 100%; 
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
+  height: auto;
 }
 
 .instagram {
