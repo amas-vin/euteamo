@@ -133,7 +133,7 @@ h6 {
   pointer-events: none;
   position: absolute;
    padding-top: 10%; /* Ajuste este valor conforme necessário */
-  padding-bottom: 10%; /* Ajuste este valor conforme necessário */
+  padding-bottom: 10px; /* Ajuste este valor conforme necessário */
   -webkit-padding-before: 67px;
           padding-block-start: 67px;
   -webkit-padding-after: max(24px, calc(29px + var(--font-size-md)));
@@ -158,7 +158,7 @@ h6 {
 }
 .carousel .item {
   position: absolute;
-  max-width: 90%; /* Limita a largura máxima a 90% */
+  max-width: 100%; /* Limita a largura máxima a 90% */
   height: auto; /* Ajusta a altura automaticamente */
   margin: 0 auto; /* Centraliza os itens */
   margin-inline: var(--container-padding-horizontal);
@@ -209,13 +209,19 @@ h6 {
 }
 
 .instagram {
-  --pading-horizontal: 16px;
+  --pading-horizontal: 8px; /* Reduz o padding horizontal para dispositivos móveis */
   --border: 1px solid var(--primary);
-  max-width: var(--max-width-post);
-  width: 100%;
+  max-width: 90%; /* Ajusta a largura máxima da moldura para 90% da tela */
+  width: 100%; /* Faz a moldura ocupar toda a largura disponível */
+  margin: 0 auto; /* Centraliza a moldura */
   border: var(--border);
-  border-radius: 20px;
+  border-radius: 10px; /* Ajusta o border-radius para ficar mais suave */
 }
+@media (max-width: 568px) {
+  .instagram {
+    padding: 8px; /* Ajusta o padding para telas menores */
+    max-width: 100%; /* Permite que a moldura ocupe 100% da largura em telas pequenas */
+  }
 .instagram__header {
   padding-block: 12px;
   border-bottom: var(--border);
@@ -240,7 +246,8 @@ h6 {
 }
 .instagram__media .img {
   max-width: 100%;
-  height: 61.2vh;
+  width: 100%; /* Faz a imagem ocupar toda a largura da moldura */
+  height: auto; /* Ajusta a altura conforme a largura */
 }
 .instagram__buttons {
   padding-block: 12px;
